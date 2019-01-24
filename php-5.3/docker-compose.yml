@@ -1,0 +1,7 @@
+version: '3.4'
+services:
+  custom:
+    container_name: optimum-php-5.3
+    build:
+      context: .
+      dockerfile: apache/Dockerfile
