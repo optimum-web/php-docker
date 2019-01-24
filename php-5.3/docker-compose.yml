@@ -4,4 +4,4 @@ services:
     container_name: optimum-php-5.3
     build:
       context: .
-      dockerfile: apache/Dockerfile
+      dockerfile: Dockerfile

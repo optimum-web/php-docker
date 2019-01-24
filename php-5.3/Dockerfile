@@ -151,9 +151,9 @@ RUN set -x && \
     make install && \
     make clean
 
-COPY apache/apache2.conf /etc/apache2/apache2.conf
-COPY apache/docker-php-* /usr/local/bin/
-COPY php/00-php.ini $PHP_INI_DIR/conf.d/
+COPY apache2.conf /etc/apache2/
+COPY docker-php-* /usr/local/bin/
+COPY 00-php.ini $PHP_INI_DIR/conf.d/
 
 ## Install/configure PHP extensions
 RUN { find /usr/local/bin /usr/local/sbin -type f -executable -exec strip --strip-all '{}' + || true; } && \
